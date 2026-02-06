@@ -1,0 +1,844 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #2c5282, #3b6ba5);
+    color: #000000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info-centered {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.phone-link, .whatsapp-link {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.phone-link {
+    background: rgba(255,255,255,0.2);
+}
+
+.whatsapp-link {
+    background: #25d366;
+}
+
+.phone-link:hover, .whatsapp-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(44, 82, 130, 0.85), rgba(59, 107, 165, 0.85)), url('https://images.unsplash.com/photo-1584622650111-993a4a3d9d1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    position: relative;
+    color: white;
+    padding: 80px 0 120px;
+    text-align: center;
+    z-index: 1;
+}
+
+.hero::before {
+    display: none;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.hero-areas {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.hero-message {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.hero-action {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+    color: #ffd700;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 32px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    gap: 10px;
+    min-height: 56px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #ff6b35, #e55a2b);
+    color: white;
+    border: 2px solid #ff6b35;
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #ff6b35, #e55a2b);
+    color: white;
+    border: 2px solid #ff6b35;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-large {
+    padding: 24px 40px;
+    font-size: 1.3rem;
+    min-height: 64px;
+}
+
+/* Trust Section */
+.trust {
+    background: white;
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin-top: -60px;
+    border-radius: 20px 20px 0 0;
+}
+
+.trust-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.trust-subtitle {
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.trust-points {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.trust-point {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.trust-icon {
+    color: #28a745;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Services Section */
+.services {
+    background: #f8f9fa;
+    padding: 80px 0;
+}
+
+.section-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Why Us Section */
+.why-us {
+    background: white;
+    padding: 80px 0;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.why-item {
+    text-align: center;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.why-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.why-item h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2c3e50;
+    text-align: center;
+}
+
+/* Work Area Section */
+.work-area {
+    background: #f8f9fa;
+    padding: 80px 0;
+}
+
+.area-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.area-category h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.area-list {
+    list-style: none;
+}
+
+.area-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    color: #666;
+}
+
+.area-list li:before {
+    content: "📍 ";
+    margin-right: 10px;
+}
+
+.area-description {
+    color: #666;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.area-highlight {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #28a745;
+    text-align: center;
+}
+
+/* Contact Section */
+.contact {
+    background: linear-gradient(135deg, #2c5282 0%, #3b6ba5 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact .section-title {
+    color: white;
+}
+
+.contact .section-subtitle {
+    color: rgba(255,255,255,0.8);
+}
+
+.contact-intro {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.contact-urgency {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    color: #ffd700;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.schedule {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.schedule-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.schedule-icon {
+    font-size: 1.5rem;
+}
+
+/* Footer */
+.footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .contact-info {
+        justify-content: center;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .trust-points {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .area-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .schedule {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .trust-title {
+        font-size: 1.8rem;
+    }
+    
+    .service-card {
+        padding: 30px 20px;
+    }
+}
+
+/* Animaciones de entrada */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animaciones iniciales */
+.nav-container {
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.hero-title {
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.hero-subtitle {
+    animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.hero-areas {
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.hero-message {
+    animation: fadeInUp 1s ease-out 0.8s both;
+}
+
+.hero-action {
+    animation: fadeInUp 1s ease-out 1s both;
+}
+
+.hero-buttons {
+    animation: fadeInUp 1s ease-out 1.2s both;
+}
+
+/* Animaciones al hacer scroll */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mejoras en botones */
+.btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-large {
+    padding: 24px 40px;
+    font-size: 1.3rem;
+    min-height: 64px;
+}
+
+/* Efecto sutil en enlaces de contacto */
+.phone-link:hover, .whatsapp-link:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+/* Animaciones para tarjetas */
+.service-card {
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-color: #e9ecef;
+}
+
+.service-icon {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+/* Animaciones para sección why-us */
+.why-item {
+    transition: all 0.3s ease;
+}
+
+.why-item:hover {
+    transform: translateY(-3px);
+}
+
+.why-icon {
+    transition: transform 0.3s ease;
+}
+
+.why-item:hover .why-icon {
+    transform: scale(1.05);
+}
+
+/* Mejoras en encabezados */
+.trust-title, .section-title {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.trust-title::after, .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, #28a745, #25d366);
+    border-radius: 1px;
+}
+
+/* Botón flotante de WhatsApp mejorado */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: white;
+    width: 65px;
+    height: 65px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    z-index: 9999;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    animation: fadeInUp 0.8s ease-out 2s both;
+    border: 3px solid #25d366;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+    background: linear-gradient(135deg, #128c7e, #25d366);
+}
+
+.whatsapp-float:active {
+    transform: scale(0.95);
+}
+
+/* Pulso sutil en botón flotante */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    }
+    50% {
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.5);
+    }
+    100% {
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    }
+}
+
+.whatsapp-float {
+    animation: fadeInUp 0.8s ease-out 2s both, pulse 2s infinite 3s;
+}
+
+/* Mejoras en sección de contacto */
+.contact-buttons .btn {
+    animation-delay: 0.1s;
+}
+
+.contact-buttons .btn:last-child {
+    animation-delay: 0.2s;
+}
+
+/* Efectos sutiles en área de trabajo */
+.area-list li {
+    transition: all 0.2s ease;
+    padding-left: 5px;
+}
+
+.area-list li:hover {
+    color: #28a745;
+    padding-left: 10px;
+}
+
+/* Botón flotante de WhatsApp para dispositivos móviles */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 58px;
+        height: 58px;
+        font-size: 22px;
+        border-radius: 10px;
+    }
+    
+    .service-card:hover {
+        transform: translateY(-3px);
+    }
+    
+    .btn:hover {
+        transform: translateY(-1px);
+    }
+}
+
+/* Animaciones suaves para el hero */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+/* El efecto shimmer se mantiene pero es más sutil con la imagen de fondo */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.03), transparent);
+    animation: shimmer 3s infinite;
+    z-index: -1;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Mejoras en trust points */
+.trust-point {
+    transition: all 0.3s ease;
+}
+
+.trust-point:hover {
+    transform: translateX(5px);
+}
+
+.trust-icon {
+    transition: transform 0.3s ease;
+}
+
+.trust-point:hover .trust-icon {
+    transform: scale(1.1);
+    color: #218838;
+}
+
+/* Animaciones para schedule */
+.schedule-item {
+    transition: all 0.3s ease;
+}
+
+.schedule-item:hover {
+    transform: translateY(-2px);
+}
+
+.schedule-icon {
+    transition: transform 0.3s ease;
+}
+
+.schedule-item:hover .schedule-icon {
+    transform: scale(1.1);
+}
